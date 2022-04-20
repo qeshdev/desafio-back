@@ -7,9 +7,13 @@ Este teste é desenvolvido pela [Qesh](https://www.linkedin.com/company/qesh-pay
 Você deverá criar um `fork` deste repositório. Nesse fork, você encontrará a pasta `project`. 
 Todo o código fonte deve ser colocado dentro da pasta `project`.
 
+O repositório deverá ser público e não poderá ter nenhuma menção à Qesh.
+
 Você terá **48h** para realizar o teste, consideraremos até onde você conseguir chegar com o código.
 
 > Lembrando que não é necessária a conclusão do teste para envio do código.
+
+Ao finalizar, responda o email referente ao teste com o link do seu repositório.
 
 ## **Sobre o teste**
 
