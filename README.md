@@ -1,7 +1,5 @@
 # Teste prático Back-End
 
-## **Sobre o teste**
-
 Você deverá desenvolver um sistema com o tema de sua escolha, seguindo os requisitos abaixo:
 
 - Deverá ser relacionado ao mercado financeiro (Saldo, ações, transações, cashback, e-commerce ou crypto, etc).
