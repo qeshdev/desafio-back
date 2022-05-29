@@ -1,22 +1,5 @@
 # Teste prático Back-End
 
-Este teste é desenvolvido pela [Qesh](https://www.linkedin.com/company/qesh-payments/) e tem como objetivo avaliar tecnicamente o candidato para a vaga de Back-End.
-
-## **Instruções**
-
-Você deverá criar um `fork` deste repositório. Nesse fork, você encontrará a pasta `project`.
-Todo o código fonte deve ser colocado dentro da pasta `project`.
-
-O repositório deverá ser público e não poderá ter nenhuma menção à Qesh.
-
-Você terá **96h** para realizar o teste, consideraremos até onde você conseguir chegar com o código.
-
-> Lembrando que não é necessária a conclusão do teste para envio do código.
-
-Ao finalizar, responda o email referente ao teste com o link do seu repositório.
-
-## **Sobre o teste**
-
 Você deverá desenvolver um sistema com o tema de sua escolha, seguindo os requisitos abaixo:
 
 - Deverá ser relacionado ao mercado financeiro (Saldo, ações, transações, cashback, e-commerce ou crypto, etc).
