@@ -1,5 +1,5 @@
 export interface CarPropertyProps {
-    nome: string
+    name: string
     phone: string
     vehicleName:string
     vehicleImagem:string

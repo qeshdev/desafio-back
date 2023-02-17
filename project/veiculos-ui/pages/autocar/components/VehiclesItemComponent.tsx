@@ -26,7 +26,7 @@ export default class VehiclesItemComponent extends Component<CarPropertyProps> {
                         <strong>Valor:</strong>{this.props.value}
                         <div className='d-grid gap-2'>
                             <a className={`${'btn'} ${styles['btn-contact']}`}
-                                href={`https://api.whatsapp.com/send?phone=55${this.props.phone}&text=Olá gostaria de informações sobre o imóvel: ${this.props.nome}`}
+                                href={`https://api.whatsapp.com/send?phone=55${this.props.phone}&text=Olá gostaria de informações sobre o imóvel: ${this.props.name}`}
                                 target={'_blank'}>Contato Proprietário</a>
                         </div>
                     </div>

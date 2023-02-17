@@ -20,14 +20,14 @@ export default class Header extends Component {
                 <header className={`container-fluid fixed-top ${styles['l-box-header']}`}>
                     <nav className={`navbar navbar-expand-lg navbar-light bg-light`}>
                         <div className={`container-fluid ${styles['l-box-nav']}`}>
-                            <a className={`navbar-brand ${styles['c-text-menu']}`} href="index.html">@AutoCar</a>
+                            <a className={`navbar-brand ${styles['c-text-menu']}`} href="autocar">@AutoCar</a>
                             <button className={`${styles['nav-btn']}`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon"></span>
                             </button>
                             <div className="collapse navbar-collapse" id="navbarNav">
                                 <ul className="navbar-nav">
                                     <li className="nav-item">
-                                        <a className={`nav-link active ${styles['c-text-menu']}`} aria-current="page" href="index.html">Home</a>
+                                        <a className={`nav-link active ${styles['c-text-menu']}`} aria-current="page" href="autocar">Home</a>
                                     </li>
                                     <li className="nav-item">
                                         <a className={`nav-link ${styles['c-text-menu']}`} href="auth/login">Cadastre seu imovel</a>

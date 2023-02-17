@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import { Component, ReactNode } from 'react'
+import Header from '../../common/components/Header'
 
 
 export default class Home extends Component {
@@ -16,7 +17,7 @@ export default class Home extends Component {
     render(): ReactNode {
         return (
             <div className={'container'}>
-                <p>login</p>
+               <Header></Header>
             </div>
         )
     }
