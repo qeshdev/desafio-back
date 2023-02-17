@@ -19,6 +19,13 @@
   margin-bottom: 60px;
 }
 
+.logo {
+  width: 180px;
+  position: absolute;
+  margin-left: -90px;
+  margin-top: -5px;
+}
+
 .c-text-menu {
   color: #fff !important;
 }
