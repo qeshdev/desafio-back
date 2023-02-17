@@ -1,0 +1,44 @@
+.c-text-menu {
+  color: #fff !important;
+}
+
+.logo {
+  width: 180px;
+  position: absolute;
+  margin-left: -90px;
+  left: 50%;
+  top: 25px;
+}
+
+.nav-btn {
+  display: none;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  height: 17rem;
+}
+
+.btn-contact {
+  background-color: #fff;
+  color: #9D1CD6;
+  border: #9D1CD6 solid !important;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-btn {
+    display: block;
+    border: none !important;
+    background-color: #3E007D !important;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.module.css.map */
