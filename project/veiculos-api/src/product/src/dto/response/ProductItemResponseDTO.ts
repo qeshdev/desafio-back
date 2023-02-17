@@ -4,25 +4,25 @@ import { CategoryItemResponseDTO } from './CategoryItemResponseDTO'
 
 export class ProductItemResponseDTO {
     code: number
-    nome: string
-    imagem: string
+    name: string
+    image: string
     whatsapp: string
-    valor: number
+    value: number
     address: AddressItemResponseDTO
-    categoria: CategoryItemResponseDTO
+    category: CategoryItemResponseDTO
 
     constructor(data: ProductModel) {
         this.code = data.code
-        this.nome = data.name
-        this.imagem = data.image
+        this.name = data.name
+        this.image = data.image
         this.whatsapp = data.whatsapp
-        this.valor = data.value
+        this.value = data.value
 
         if (data.address)
             this.address = new AddressItemResponseDTO(data.address)
 
         if (data.categoryCode)
-            this.categoria = new CategoryItemResponseDTO(data.categoryCode)
+            this.category = new CategoryItemResponseDTO(data.categoryCode)
 
 
     }
