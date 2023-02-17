@@ -1,9 +1,9 @@
-import { Component, ReactNode } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
+import { Component, ReactNode } from 'react'
 import styles from '../../../styles/main.module.css'
 import { CarPropertyProps } from '../interfaces/props/CarPropertyProps'
 
-export default class ItemCar extends Component<CarPropertyProps> {
+export default class VehiclesItemComponent extends Component<CarPropertyProps> {
 
 
     constructor(props: any) {
