@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import { Component, ReactNode } from 'react'
 import styles from '../../styles/main.module.css'
-import Header from '../common/components/Header'
+import Header from '../common/components/layout/components/Header'
 import VehiclesListComponent from './components/VehiclesListComponent'
 import { HomeProps } from './interfaces/props/HomeProps'
 import { HomeState } from './interfaces/state/HomeState'
