@@ -2,66 +2,66 @@
 
 CREATE SCHEMA autocar AUTHORIZATION postgres;
 
--- DROP SEQUENCE autocar.address_code_seq;
+-- DROP SEQUENCE address_code_seq;
 
-CREATE SEQUENCE autocar.address_code_seq
+CREATE SEQUENCE address_code_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
 	START 1
 	CACHE 1
 	NO CYCLE;
--- DROP SEQUENCE autocar.category_code_seq;
+-- DROP SEQUENCE category_code_seq;
 
-CREATE SEQUENCE autocar.category_code_seq
+CREATE SEQUENCE category_code_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
 	START 1
 	CACHE 1
 	NO CYCLE;
--- DROP SEQUENCE autocar.clinic_base64_code_seq;
+-- DROP SEQUENCE clinic_base64_code_seq;
 
-CREATE SEQUENCE autocar.clinic_base64_code_seq
+CREATE SEQUENCE clinic_base64_code_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
 	START 1
 	CACHE 1
 	NO CYCLE;
--- DROP SEQUENCE autocar.person_auth_code_seq;
+-- DROP SEQUENCE person_auth_code_seq;
 
-CREATE SEQUENCE autocar.person_auth_code_seq
+CREATE SEQUENCE person_auth_code_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
 	START 1
 	CACHE 1
 	NO CYCLE;
--- DROP SEQUENCE autocar.person_code_seq;
+-- DROP SEQUENCE person_code_seq;
 
-CREATE SEQUENCE autocar.person_code_seq
+CREATE SEQUENCE person_code_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
 	START 1
 	CACHE 1
 	NO CYCLE;
--- DROP SEQUENCE autocar.product_code_seq;
+-- DROP SEQUENCE product_code_seq;
 
-CREATE SEQUENCE autocar.product_code_seq
+CREATE SEQUENCE product_code_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 2147483647
 	START 1
 	CACHE 1
-	NO CYCLE;-- autocar.address definition
+	NO CYCLE;-- address definition
 
 -- Drop table
 
--- DROP TABLE autocar.address;
+-- DROP TABLE address;
 
-CREATE TABLE autocar.address (
+CREATE TABLE address (
 	code serial4 NOT NULL,
 	cep varchar NOT NULL,
 	logradouro varchar NOT NULL,
@@ -72,13 +72,13 @@ CREATE TABLE autocar.address (
 );
 
 
--- autocar.category definition
+-- category definition
 
 -- Drop table
 
--- DROP TABLE autocar.category;
+-- DROP TABLE category;
 
-CREATE TABLE autocar.category (
+CREATE TABLE category (
 	code serial4 NOT NULL,
 	"name" varchar NOT NULL,
 	CONSTRAINT "PK_652a15c02538138f021f1320de8" PRIMARY KEY (code),
@@ -86,13 +86,13 @@ CREATE TABLE autocar.category (
 );
 
 
--- autocar.clinic_base64 definition
+-- clinic_base64 definition
 
 -- Drop table
 
--- DROP TABLE autocar.clinic_base64;
+-- DROP TABLE clinic_base64;
 
-CREATE TABLE autocar.clinic_base64 (
+CREATE TABLE clinic_base64 (
 	code serial4 NOT NULL,
 	url text NOT NULL,
 	cliniclogobase64 text NOT NULL,
@@ -100,13 +100,13 @@ CREATE TABLE autocar.clinic_base64 (
 );
 
 
--- autocar.person definition
+-- person definition
 
 -- Drop table
 
--- DROP TABLE autocar.person;
+-- DROP TABLE person;
 
-CREATE TABLE autocar.person (
+CREATE TABLE person (
 	code serial4 NOT NULL,
 	cpf varchar NOT NULL,
 	cnpj varchar NOT NULL,
@@ -117,13 +117,13 @@ CREATE TABLE autocar.person (
 );
 
 
--- autocar.typeorm_metadata definition
+-- typeorm_metadata definition
 
 -- Drop table
 
--- DROP TABLE autocar.typeorm_metadata;
+-- DROP TABLE typeorm_metadata;
 
-CREATE TABLE autocar.typeorm_metadata (
+CREATE TABLE typeorm_metadata (
 	"type" varchar NOT NULL,
 	"database" varchar NULL,
 	"schema" varchar NULL,
@@ -133,28 +133,28 @@ CREATE TABLE autocar.typeorm_metadata (
 );
 
 
--- autocar.person_auth definition
+-- person_auth definition
 
 -- Drop table
 
--- DROP TABLE autocar.person_auth;
+-- DROP TABLE person_auth;
 
-CREATE TABLE autocar.person_auth (
+CREATE TABLE person_auth (
 	code serial4 NOT NULL,
 	"password" varchar NOT NULL,
 	CONSTRAINT "PK_7aad1887dcf1ac1ca72eac9b0d4" PRIMARY KEY (code),
 	CONSTRAINT "UQ_7aad1887dcf1ac1ca72eac9b0d4" UNIQUE (code),
-	CONSTRAINT "FK_7aad1887dcf1ac1ca72eac9b0d4" FOREIGN KEY (code) REFERENCES autocar.person(code)
+	CONSTRAINT "FK_7aad1887dcf1ac1ca72eac9b0d4" FOREIGN KEY (code) REFERENCES person(code)
 );
 
 
--- autocar.product definition
+-- product definition
 
 -- Drop table
 
--- DROP TABLE autocar.product;
+-- DROP TABLE product;
 
-CREATE TABLE autocar.product (
+CREATE TABLE product (
 	code serial4 NOT NULL,
 	"name" varchar NOT NULL,
 	image varchar NOT NULL,
@@ -164,6 +164,6 @@ CREATE TABLE autocar.product (
 	"addressCode" int4 NULL,
 	CONSTRAINT "PK_99c39b067cfa73c783f0fc49a61" PRIMARY KEY (code),
 	CONSTRAINT "REL_64506b64424f4d7bb50574ecb1" UNIQUE ("addressCode"),
-	CONSTRAINT "FK_64506b64424f4d7bb50574ecb13" FOREIGN KEY ("addressCode") REFERENCES autocar.address(code),
-	CONSTRAINT "FK_eba03ffe5b581c64f33b50e2730" FOREIGN KEY ("categoryCode") REFERENCES autocar.category(code)
+	CONSTRAINT "FK_64506b64424f4d7bb50574ecb13" FOREIGN KEY ("addressCode") REFERENCES address(code),
+	CONSTRAINT "FK_eba03ffe5b581c64f33b50e2730" FOREIGN KEY ("categoryCode") REFERENCES category(code)
 );
