@@ -26,15 +26,13 @@ import { AppService } from './app.service'
 
 @Module({
     imports: [
-        TypeOrmModule.forRoot({ ...Database.getConnectionOptions<PostgresConnectionOptions>(), }),
-        TypeOrmModule.forFeature([]),
+        TypeOrmModule.forRoot({ ...Database.getConnectionOptions<PostgresConnectionOptions>() }),
         JwtModule.register({
             secret: jwtConstants.secret,
             signOptions: { expiresIn: process.env.EXPIRESIN },
-        }),
+        })
     ],
     controllers: [PersonController, AppController, AuthController, AddressController, ProductController, CategoryController, AuthController],
     providers: [PersonDAO, AddressDAO, ProductDAO, CategoryDAO, AuthDAO, PersonManager, AuthManager, AppService, AddressManager, ProductManager, AuthManager, CategoryManager, JwtService, LocalStrategy, JwtStrategy],
 })
 export class AppModule { }
-

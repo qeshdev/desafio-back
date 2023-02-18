@@ -1,4 +1,4 @@
-import { EntityRepository, Repository, SelectQueryBuilder } from "typeorm"
+import { EntityRepository, getRepository, Repository, SelectQueryBuilder } from "typeorm"
 import { AuthModel } from "../models/AuthModel"
 
 @EntityRepository(AuthModel)
@@ -16,9 +16,7 @@ export class AuthDAO extends Repository<AuthModel> {
     }
 
     private async _createQueryBuilder(): Promise<SelectQueryBuilder<AuthModel>> {
-        return this.createQueryBuilder()
-            .select("auth")
-            .from(AuthModel, "auth")
+        return getRepository(AuthModel).createQueryBuilder('auth')
     }
 
 }

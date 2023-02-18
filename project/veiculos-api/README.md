@@ -1,52 +1,64 @@
-!["logo"](https://raw.githubusercontent.com/norberto-jn/imoveis-img/main/logo.png)
-
-
-
-
-
-
-
-# Video
-
-
-
-[!["Imagem imoveis"](https://raw.githubusercontent.com/norberto-jn/imoveis-img/main/card-video.png)](https://www.youtube.com/watch?v=At75Wq2dAws)
-
-
-
 
 
 ## Descrição
 
-O Mobimovel e uma aplicação para venda e locação de imoveis.
-
-
-
-## Rodando SQl
-
-:open_file_folder:  project/veiculos-api/migration/sql_001.sql
-
-
-
-## Modificação de conexão ao banco de dados.
-
-:open_file_folder:  project/veiculos-api/src/main/app.module.ts
-
-
-
-!["conexão"](https://raw.githubusercontent.com/norberto-jn/imoveis-img/main/conexao.png)
+O **Mobauto** e uma aplicação para venda e locação de automóveis.
 
 
 
 
 
-## Instalando dependências 
+## Primeiros passos
+
+
+
+### - Rodando SQl
+
+:open_file_folder:  `project/veiculos-api/migration/sql_001.sql`
+
+
+
+### - Modificação de conexão do banco de dados.
+
+Para conseguir conectar ao banco de dados e necessário modificar o arquivo **.env**
+
+:open_file_folder:  `project/veiculos-api/.env`
+
+GOOGLE_CLOUD_STORAGE_CLIENT_EMAIL =
+GOOGLE_CLOUD_STORAGE_PRIVATE_KEY = 
+GOOGLE_CLOUD_STORAGE_PROJECT_ID = 
+GOOGLE_CLOUD_STORAGE_STORAGE_BUCKET = 
+
+HOST_DEV='localhost'
+PORT_DEV=5432
+USERNAME_DEV='postgres'
+PASSWORD_DEV=''
+DATABASE_DEV=''
+DATABASE_SCHEMA_DEV=''
+DATABASETYPE_DEV='postgres'
+
+HOST_PRD=''
+PORT_PRD=
+USERNAME_PRD=''
+PASSWORD_PRD=''
+DATABASE_PRD=''
+DATABASE_SCHEMA_PRD=''
+DATABASETYPE_PRD=''
+
+SALTORROUNDS=10
+NODE_ENV='development'
+SECRET='secretKey'
+EXPIRESIN='1s'
+
+
+
+### - Instalando dependências 
 
 ```bash
 $ npm install
 ```
 
-## Rodando o projeto
+### - Rodando o projeto
 
 ```bash
 # development
