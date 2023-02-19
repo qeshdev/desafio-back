@@ -25,6 +25,7 @@ Para conseguir conectar ao banco de dados e necessário modificar o arquivo **.e
 
 :open_file_folder:  `project/veiculos-api/.env`
 
+```bash
 GOOGLE_CLOUD_STORAGE_CLIENT_EMAIL =
 GOOGLE_CLOUD_STORAGE_PRIVATE_KEY = 
 GOOGLE_CLOUD_STORAGE_PROJECT_ID = 
@@ -50,7 +51,7 @@ SALTORROUNDS=10
 NODE_ENV='development'
 SECRET='secretKey'
 EXPIRESIN='1s'
-
+```
 
 
 ### - Instalando dependências 
