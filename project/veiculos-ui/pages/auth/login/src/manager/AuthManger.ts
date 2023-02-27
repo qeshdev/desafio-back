@@ -8,7 +8,7 @@ export default abstract class AuthManger {
         await AuthHttpUtil.getAuth({ username: dto.username, password: dto.password })
 
         if (window.sessionStorage.getItem('token')) {
-            window.location.assign("/autocar")
+            window.location.assign("/automobiles")
         }
 
     }

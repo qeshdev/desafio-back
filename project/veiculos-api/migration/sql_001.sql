@@ -1,61 +1,4 @@
--- DROP SCHEMA autocar;
-
-CREATE SCHEMA autocar AUTHORIZATION postgres;
-
--- DROP SEQUENCE address_code_seq;
-
-CREATE SEQUENCE address_code_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE category_code_seq;
-
-CREATE SEQUENCE category_code_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE clinic_base64_code_seq;
-
-CREATE SEQUENCE clinic_base64_code_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE person_auth_code_seq;
-
-CREATE SEQUENCE person_auth_code_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE person_code_seq;
-
-CREATE SEQUENCE person_code_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;
--- DROP SEQUENCE product_code_seq;
-
-CREATE SEQUENCE product_code_seq
-	INCREMENT BY 1
-	MINVALUE 1
-	MAXVALUE 2147483647
-	START 1
-	CACHE 1
-	NO CYCLE;-- address definition
+-- autocar.address definition
 
 -- Drop table
 
@@ -72,7 +15,7 @@ CREATE TABLE address (
 );
 
 
--- category definition
+-- autocar.category definition
 
 -- Drop table
 
@@ -86,21 +29,7 @@ CREATE TABLE category (
 );
 
 
--- clinic_base64 definition
-
--- Drop table
-
--- DROP TABLE clinic_base64;
-
-CREATE TABLE clinic_base64 (
-	code serial4 NOT NULL,
-	url text NOT NULL,
-	cliniclogobase64 text NOT NULL,
-	CONSTRAINT "PK_b069d02247c0187d2e02b7034b2" PRIMARY KEY (code)
-);
-
-
--- person definition
+-- autocar.person definition
 
 -- Drop table
 
@@ -117,23 +46,7 @@ CREATE TABLE person (
 );
 
 
--- typeorm_metadata definition
-
--- Drop table
-
--- DROP TABLE typeorm_metadata;
-
-CREATE TABLE typeorm_metadata (
-	"type" varchar NOT NULL,
-	"database" varchar NULL,
-	"schema" varchar NULL,
-	"table" varchar NULL,
-	"name" varchar NULL,
-	value text NULL
-);
-
-
--- person_auth definition
+-- autocar.person_auth definition
 
 -- Drop table
 
@@ -148,7 +61,7 @@ CREATE TABLE person_auth (
 );
 
 
--- product definition
+-- autocar.product definition
 
 -- Drop table
 

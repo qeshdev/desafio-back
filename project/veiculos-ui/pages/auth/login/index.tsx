@@ -43,7 +43,7 @@ export default class Home extends Component<React.ReactNode, LoginStatePropertie
     render(): ReactNode {
         return (
             <div style={{ width: '100%', height: '100%' }}>
-                <Header></Header>
+                {/* <Header></Header> */}
                 <main className={`${styles['l-box-main']}`}>
 
                     <div className={`${styles['l-box-img']}`}></div>
